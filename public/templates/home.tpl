@@ -7,7 +7,8 @@
     ###title###
     </title>
     <link rel="stylesheet/less" href="./src/less/__global.less">
-    <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 <div class="wrapper">
