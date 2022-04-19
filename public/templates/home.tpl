@@ -26,6 +26,5 @@ function myFunction() {
 }
 </script>
 <script src="js-core/controller.js" charset="utf-8"></script>
-<script src="js-core/save.js" charset="utf-8"></script>
 </body>
 </html>
