@@ -1,6 +1,4 @@
 Hello this is first version of Docky
-So this is instruction to use it
-1.Delete composer.json(he's not be use)
  - All files in public(main root)
  - All templates in public/templates
  - Main controller(Route) in Docky/Router
