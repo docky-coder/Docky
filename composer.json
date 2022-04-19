@@ -1,0 +1,16 @@
+{
+   "autoload": {
+     "psr-4": {
+        "Named": "src/"
+     }
+   },
+   "version": "1.0.0",
+   "authors": [
+        {
+            "name": "Docky Coder",
+            "email": "__docky-coder@docky-framework.pw.xyz",
+            "homepage": "https://github.com/docky-coder/Docky",
+            "role": "Developer/Coder"
+        }
+    ] 
+}
