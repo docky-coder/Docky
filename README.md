@@ -9,14 +9,13 @@ So this is instruction to use it
  - Root controller(Index) in public/index
  - Docky use less,but you can use css
  -----------------------------------------
- Templates structure
- ###title### => get env from config
- if title in config it also changed
- ###title()### => search for 
- public/__docky/title.html
- (use it as template for small code)
- Its all in first version.
- If it be more reactions,i make the second
+ + Templates structure
+ - ###title### => get env from config
+ + if title in config it also changed
+ - ###title()### => search for public/--docky/title.html
+ + (use it as template for small code)
+ - Its all in first version.
+ - If it be more reactions,i make the second
  -----------------------------------------
  Docky => github.com/docky-coder/Docky
  -----------------------------------------
