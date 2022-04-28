@@ -388,15 +388,26 @@ class Router {
                 $i = 0;
                 while (($line = fgets($handle)) !== false) {
                     if (strstr($line, "###")){
-                        if (strstr($line, "()###")){
+                        if (strstr($line, "()###") or strstr($line, "(`php`)###")){
                             //echo "Template [$i] found => ".$line."<br/>";
-                            $temp_file = str_replace("###","",$line);
-                            $temps = str_replace("()","",$temp_file);
-                            $temp = trim($temps);
-                            if (file_exists("__docky/".$temp.".html")){
-                                echo file_get_contents("__docky/".$temp.".html");
+                            if (strstr($line, "()###")){
+                                $temp_file = str_replace("###","",$line);
+                                $temps = str_replace("()","",$temp_file);
+                                $temp = trim($temps);
+                                if (file_exists("__docky/".$temp.".html")){
+                                    echo file_get_contents("__docky/".$temp.".html");
+                                }else{
+                                    die("Error executing path of template, failed to found => ".$temp.".In docky root template path");
+                                }
                             }else{
-                                die("Error executing path of template, failed to found => ".$temp.".In docky root template path");
+                                $temp_file = str_replace("###","",$line);
+                                $temps = str_replace("(`php`)","",$temp_file);
+                                $temp = trim($temps);
+                                if (file_exists("__docky/".$temp.".php")){
+                                    include "__docky/".$temp.".php";
+                                }else{
+                                    die("Error executing path of template, failed to found => ".$temp.".In docky root template path");
+                                }
                             }
                         }else{
                             //echo "Env [$i] found => ".$line."<br/>";
@@ -413,7 +424,7 @@ class Router {
                 fclose($handle);
             } else {
                 die("Error opening template!");
-            } 
+            }
             //echo $template_finish;
         }
     }
